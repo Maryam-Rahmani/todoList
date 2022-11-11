@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo List Project | Quera BootCamp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+  <body dir="ltr">
+    <div class="cantainer">
+        <div class="task-inputs">
+          <div id="useAlertInput"></div>
+          <label for="task-title" >Enter Task</label>
+          <input type=text id="task-title" placeholder="Todo 1" />
+          <br />
+          <div id="useAlertDescription"></div>
+          <label for="task-description" >Enter Task Description</label>
+          <textarea name="textarea" id="task-description"></textarea>
+          <button id="btn-add">Add Task</button>
+        </div>
+      <div class="task-lists"></div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Edit Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="task-inputs">
+              <label for="modal-task-title" >Enter Task</label>
+              <input type=text id="modal-task-title" />
+              <br />
+              <label for="modal-task-description" >Enter Task Description</label>
+              <textarea name="textarea" id="modal-task-description"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveEdit">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./jquery-3.5.1.slim.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
